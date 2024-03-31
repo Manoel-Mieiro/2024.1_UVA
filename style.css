@@ -1,0 +1,506 @@
+:root {
+    --sidebar-color: rgb(227, 0, 0);
+    --menu-font-color: rgba(97, 29, 20, 1);
+    --bar-color: rgba(224, 68, 47, 1);
+    --text-color: rgba(0, 0, 0, 0.76);
+    --box-color: rgba(255, 255, 255);
+    --visited-link-color: rgba(86, 75, 235, 0.4);
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Antonio', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Playpen Sans', cursive; */
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+h1,
+h2 {
+    font-family: 'Antonio', sans-serif;
+    /* font-family: 'Playpen Sans', cursive; */
+    color: var(--menu-font-color);
+    font-size: 2.7em;
+}
+
+h3,
+h4 {
+    /* font-family: 'Antonio', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playpen Sans', cursive; */
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 1);
+}
+
+hr {
+    border: 0.52px solid var(--menu-font-color);
+}
+
+footer {
+    font-weight: bold;
+}
+
+section,
+main,
+blockquote {
+    font-size: 1.6em;
+    padding-left: 2%;
+    padding-right: 4%;
+    max-width: fit-content;
+    max-height: max-content;
+}
+
+section{
+    padding-bottom: 36.5%;
+}
+
+main {
+    padding-left: 0;
+}
+
+
+
+article, #goal{
+    padding-bottom: 4%;
+}
+
+/* Bloco main h2 gera linhas horizontais em main */
+/* main h2 {
+    display: inline;
+}
+
+main h2::after {
+    content: "";
+    display: inline-block;
+    width: 10%;
+    height: 7px;
+    background-color: var(--bar-color);
+    margin-right: 10px;
+    padding-left: 32%;
+    margin-top: 4%;
+    vertical-align: middle;
+    float: right;
+} */
+
+dd {
+    margin: 0;
+}
+
+
+/* Container para o conteúdo no geral */
+.landscape {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /*Dvisão do display em duas colunas grid*/
+    gap: 20px;
+    /*Aplicado espaçamento entre colunas*/
+    height: 100vh;
+    /* Ajuste de autura de forma a opucar 100% do viewport */
+}
+
+/*Conteúdo à direita*/
+.main-content {
+    padding: 20px;
+    padding-top: 1.3%;
+    /* Adicione espaço de preenchimento ao conteúdo principal, se necessário */
+}
+
+/* Barra lateral esquerda*/
+.side-bar {
+    background-color: var(--sidebar-color);
+    padding: 20px;
+    margin-left: 0;
+    font-weight: bold;
+    color: var(--text-color);
+    grid-template-rows: auto 1fr auto;
+}
+
+/*O bloco circle ajusta uma forma e uma imagem ao formato de círculo*/
+.circle {
+    width: 270px;
+    height: 270px;
+    background-color: var(--menu-font-color);
+    border-radius: 50%;
+    overflow: hidden;
+    /* Propriedade para que a imagem não ultrapasse os limites do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 13em; */
+}
+
+.circle img {
+    max-width: 90%;
+    max-height: 90%;
+    width: 17rem;
+    border-radius: 100%;
+}
+
+#circle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8% 14%;
+}
+
+/* Área de atuação profissional */
+#field {
+    font-size: 2.4em;
+    text-transform: uppercase;
+    padding-bottom: 5%;
+}
+
+/* Remoção do gap entre os <h1> empilhados */
+#nome {
+    /* font-size: 6em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: left; */
+    margin: 0;
+}
+
+/* Container para o nome */
+#full-name {
+    font-size: 4em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: left;
+    height: max-content;
+    /* margin: 0; */
+}
+
+/* Remoção dos bullets de <ul>  */
+#contact-info {
+    /* list-style: none; */
+    list-style: upper-roman;
+}
+
+/* icones */
+.fa.fa-phone,
+.fa-mail-bulk,
+.fa-globe{
+    font-size: 1em;
+    padding-right: 4%;
+    padding-bottom: 6%;
+}
+
+/* datas */
+.job-title {
+    float: left;
+}
+
+.job-period {
+    float: right;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: var(--sidebar-color);
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    display: flex; /* Adiciona display flex para alinhar horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Alinha os itens à esquerda e à direita */  
+    max-height: 10rem;
+  }
+
+  .topnav h1{
+    font-size: 2.4em;
+    padding: 2% 20% 2% 4%;
+  }
+  
+  .topnav a {
+    flex: 1; /* Faz com que os links ocupem todo o espaço disponível */
+    flex-direction: column;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    float: inline-end;
+    justify-content: flex-end;
+    margin-left: 2vw;   
+  }
+
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: var(--text-color);
+    padding: 7.59% 6% 7.59% 6%;
+  }
+
+#main:hover{
+    background-color: var(--sidebar-color);
+}
+
+#main h1:hover{
+    color: white;
+}
+
+#main img{
+    /* width: 10vh; */
+    width: 50%;
+    margin-right: 61%;
+}
+
+.contact-section {
+    max-width: 1200px;
+    margin: 6% auto 10% auto;
+    padding: 2% 10% 2% 10%;
+    background-color: var(--box-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 1.2em;
+    margin-bottom: 4rem;
+}
+
+.social-icons {
+    /* Remova o display: flex */
+    margin-top: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin-right: 10rem; /* Adicione uma margem direita para espaçamento entre os links */
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.fa-instagram,
+.fa-behance,
+.fa-linkedin {
+    font-size: 1.6em;
+    color: var(--menu-font-color);
+}
+
+#social_links {
+    color: var(--bar-color);
+    padding-left: 7%;
+}
+
+#social_links:visited {
+    color: var(--visited-link-color);
+}
+
+.landing-text {
+    margin: 12% 50% auto 5% ;
+    font-size: 2.5em;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+#role{
+    /* font-size: 4em; */
+    color: var(--text-color);
+}
+
+#role img{
+    /* height: 6vh; */
+    width: 75vh;
+    /* max-width: fit-content; */
+    min-width: 20vh;
+    max-width: 80vh;
+
+}
+
+#nome{
+    color: var(--bar-color);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--sidebar-color);
+    color: white;
+    text-align: left;
+    padding: 1% 0 1% 3%;
+}
+
+.footer-cv {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: var(--text-color);
+    text-align: center;
+    padding: 1% 0 1% 3%;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 3rem;
+    color: var(--sidebar-color);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    color: var(--menu-font-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 2em;
+    font-size: 1em;
+    color: var(--text-color);
+
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-transform: capitalize;
+}
+
+th {
+    background-color: var(--sidebar-color);
+    color: white;
+    text-transform: uppercase;
+}
+
+tbody tr:hover {
+    background-color: var(--box-color);
+}
+
+.portifolio {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #333;
+}
+
+.portifolio td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.portifolio img {
+    max-width: 40%; /* Adiciona um tamanho máximo para as imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Evita espaçamento extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem na célula da tabela */
+}
+
+.portifolio tbody tr:hover {
+    background-color: #f5f5f5;
+}
+.portifolio video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centraliza o vídeo horizontalmente na célula */
+}
+
+.portifolio tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.landing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 46%;
+    padding-left: 4%;
+}
+
+.image-container {
+    max-width: 100%; 
+    /* margin-right: 88vh; */
+}
+
+.profile {
+    /* width: 90%; */
+    /* height: auto; */
+    margin-top: 6%;
+    margin-bottom: 6%;
+    height: 80vh;
+    max-height: 90vh;
+    min-height: 30vh;
+    /* width: 90vh; */
+
+}
+
+
+/* Contato */
+
+.principal {
+    display: flex;
+    justify-content: space-around;
+    color: #D4CACD;
+    font-family: Libre Bodoni;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h1, h2 {
+    color: #D4CACD;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.opcoes {
+    border: none;
+}
+
+input[type="submit"] {
+    background-color: var(--menu-font-color);
+    cursor: pointer;
+    color: #D4CACD;
+    font-family: Libre Bodoni;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+input[type="submit"]:hover {
+    background-color: #201218;
+}
